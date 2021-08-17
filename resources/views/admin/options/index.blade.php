@@ -1,0 +1,73 @@
+@extends('layouts.admin')
+
+@section('content')
+
+<h3 class="page-title">{{ __('Option') }}
+	<div class="pull-right">
+		<a class="btn btn-site" role="button" href="{{ route('admin.options.create') }}"><i class="fa fa-plus"></i>{{ __('Add') }}</a>
+	</div>
+</h3>
+<div class="clearfix"></div>
+<div class="row">
+	<div class="col-sm-12">
+		@if(Session::has('msg'))
+		<div id="add_success" class="alert alert-success flash_notice">{{ Session::get('msg') }}</div>
+		@endif
+		<div class="table-responsive">
+			<table id="table" class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>
+						<th class=""><input type="checkbox" id="selectall" /></th>
+						<th class=""> {{ __('Title')  }}</th>
+						<th class="text-center">{{  __('Add option value') }}</th>
+						<th class="text-center status_td">{{__('Status')}}</th>
+						<th class="text-center">{{ __('Actions') }}</th>
+					</tr>
+				</thead>
+				<tbody id="product_rows">
+					@if(count($options))
+					@foreach ($options as $k1 => $option)
+					<tr id="row-{{ $option['id'] }}" class="row-move">
+						<td class="text-center"><input type="checkbox" class="allcheckbox" value="{{$option['id'] }}" /></td>
+						<td>{{ $option->name }}</td>
+						<td class="text-center">
+							<a href="{{ route('admin.option-values.index', array('type'=>$option['id'])) }}" class="table_link"><i class="fa fa-plus"></i> <?php echo __('Add option value') ?></a>
+						</td>
+						<td class="text-center">
+							@php
+							$icon = "fa-square-o";
+							if($option->status == 1) {
+								$icon = "fa-check-square-o";
+							}
+							@endphp
+							@include('admin.general.singlecheckbox', ['id' => $option->id , 'column'=>'status', "value"=>$option->status, 'icon_class'=>$icon, 'class'=>'green'])
+
+						</td>
+						<td class="text-center action_div">
+							@include('admin.general.action_btn', ['id' => $option->id, 'route' => 'admin.options'])
+						</td>
+					</tr>
+					@endforeach
+					@else
+					<tr>
+						<td colspan="6">
+							{{__('No Record found') }}
+						</td>
+					</tr>
+					@endif
+				</tbody>
+			</table>
+		</div>
+		<div class="clearfix"></div>
+		@include('admin.general.changeMultiAction', array(
+		'table_name' => 'options',
+		'ajax_url'=> '',
+		'is_orderby'=> 'yes',
+		'action' => array('change-status-1' => __('Active'), 'change-status-0' => __('Inactive'), 'delete' => __('Delete'))
+		))
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+@endsection

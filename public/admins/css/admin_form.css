@@ -1,0 +1,28 @@
+body{width: 100%;height: 100%;background: #444;}
+.form-container{max-width: 350px;padding: 25px;background-color: #F7F7F7;margin: 0 auto 25px;margin-top: 60px;}
+.logo {width: auto;margin: 0 auto 25px;display: block;}
+.form-group {margin-bottom: 10px;}
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text] {width: 100%;display: block;margin-bottom:0px;z-index: 1;position: relative;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-radius: 0px}
+.form-signin .form-control:focus {border-color: rgb(104, 145, 162);outline: 0;-webkit-box-shadow: none;box-shadow: none;}
+.form-signin .form-group label { font-size:13px; }
+.btn-site {background: #000000;border:1px solid #000000;margin-bottom: 10px;color: #ffffff;border-radius: 0;-o-transition: all 0.218s;-moz-transition: all 0.218s;-webkit-transition: all 0.218s;transition: all 0.218s;}
+.btn-site:focus, .btn-site:hover{outline: 0 !important;box-shadow: none; background: transparent;color: #000000;}
+.btn.disabled,button.disabled,.btn[disabled],fieldset[disabled] .btn, div.disabled{box-shadow:none;cursor:not-allowed;opacity:0.30;pointer-events:none}
+.alert-danger{background:url("/assets/images/error.png") no-repeat scroll 5px center #f2dede;padding-left:37px;border-color:#E32A31;}
+.alert-success{background:url("/assets/images/success.png") no-repeat scroll 5px center #dff0d8;padding-left:37px;border-color:#ABD686;}
+.has-error .form-control , .form-control.error{border:1px dashed #E32A31;background:#f9e9e9;}
+.has-error .form-control:focus{box-shadow:none;}
+.has-error label.control-label{color:#E32A31;}
+.has-error span.error , .has-error label.error, label.error{padding-left:0px;font-size:11px;font-weight:normal;color:#E32A31;}
+label.error{display:none;}
+.error_list{padding-left:0px;list-style-type:none;}
+.error_list li{color:#E32A31;font-size: 11px}
+span.require{color:#E32A31;}
+.mobile_error{position:relative;}
+.mobile_error label.error,.mobile_error span.error{position:absolute;bottom:8px;right:0px;z-index:11}
+/*Footer*/
+.footer {font-size: 11px;position: absolute;bottom: 10px;width: 100%;right: 10px;color: #ffffff; text-align:right}
+.footer a {text-decoration: none;color: #ccc;}
+.footer a:hover {color: #ffffff;}
