@@ -66,6 +66,6 @@
   'Online' => 'online@jeordies.com.tr',
   'captcha_g3_sitekey' => '6Lc85yUaAAAAAMlrnJGtde9JwssSQjWNfjZXvJKK',
   'captcha_g3_secretkey' => '6Lc85yUaAAAAAF5wz29UMMu_S0t_Z7joCztH7J5-',
-  'default_currency' => 'TRY',
+  'default_currency' => 'try',
   'remote_api_url_v3' => 'http://77.75.32.138:9191/IntegratorService',
 );

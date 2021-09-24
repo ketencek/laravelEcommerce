@@ -85,18 +85,6 @@
             <div class="collapse navbar-collapse navbar_menu" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar_main">
 
-                    @foreach($menus as $m_name => $m_array)
-                        @php
-                            if(isset($m_array['submenu'])) {
-                                foreach($m_array['submenu'] as $s_name => $s_array) {
-
-                                }
-                            } else {
-
-                            }
-                        @endphp
-                    @endforeach
-
                     <li class="active">
                         <a class="active" href="{{url('admin')}}">
                             <i class="fa fa-dashboard"></i> <span>Dashboard</span>

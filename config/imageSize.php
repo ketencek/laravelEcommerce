@@ -60,10 +60,4 @@
     'medium' => '300 X 150',
     'small' => '200 X 100',
   ),
-  'Certificate' => 
-  array (
-    'big' => '500 X 250',
-    'medium' => '400 X 200',
-    'small' => '200 X 100',
-  ),
 );

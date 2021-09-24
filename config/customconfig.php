@@ -1,7 +1,7 @@
 <?php
 
-
-function url_origin($s, $use_forwarded_host = false) {
+// if(!function_exist(url_origin)){
+    function url_origin($s, $use_forwarded_host = false) {
     if (isset($s['SERVER_PROTOCOL'])) {
         $ssl = (!empty($s['HTTPS']) && $s['HTTPS'] == 'on');
         $sp = strtolower($s['SERVER_PROTOCOL']);
@@ -14,6 +14,7 @@ function url_origin($s, $use_forwarded_host = false) {
     }
     return '';
 }
+// }
 
 if (isset($_SERVER) && count($_SERVER)) {
     $server_url_path = $_SERVER['DOCUMENT_ROOT'];

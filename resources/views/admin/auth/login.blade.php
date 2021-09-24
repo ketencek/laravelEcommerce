@@ -2,12 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
 
 <head>
-	<?php// include_http_metas() ?>
-	<?php //include_metas() ?>
 	<meta name="language" content="tr" />
 	<title> Admin Panel</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<?php// include_partial('global/favicon'); ?>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<link rel='stylesheet' href='{{ asset("admins/css/layout.min.css")}}' type='text/css' media='all' />
 	<link rel='stylesheet' href='{{ asset("admins/css/admin_form.min.css")}}' type='text/css' media='all' />
 </head>
